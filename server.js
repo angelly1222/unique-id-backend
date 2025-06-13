@@ -4,7 +4,9 @@ const cors = require('cors');         // ✅ 1. Import CORS
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());                      // ✅ 2. Enable CORS for all origins
+app.use(cors({
+  origin: 'https://q.surveys.unimelb.edu.au'
+}));
 
 // Generate IDs from 001 to 550
 let availableIDs = Array.from({ length: 550 }, (_, i) => String(i + 1).padStart(3, '0'));
