@@ -31,5 +31,6 @@ app.get('/resetIDs', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Backend running at http://localhost:${port}`);
+    console.log(`Backend running on port ${port}`);
+
 });
