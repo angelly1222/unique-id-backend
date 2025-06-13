@@ -5,7 +5,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://q.surveys.unimelb.edu.au'
+  origin: 'https://q.surveys.unimelb.edu.au',
+  optionsSuccessStatus: 200
 }));
 
 // Generate IDs from 001 to 550
