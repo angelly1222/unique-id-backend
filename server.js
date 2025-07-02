@@ -5,7 +5,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://q.surveys.unimelb.edu.au',
+  origin: [
+    'https://q.surveys.unimelb.edu.au',       // Old survey
+    'https://bcnm2025.qualtrics.com'          // New survey
+  ],
   optionsSuccessStatus: 200
 }));
 
